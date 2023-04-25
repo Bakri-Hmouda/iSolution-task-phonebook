@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form method="POST" action="/contacts/new">
+    <form method="POST" action="/new">
         @csrf
         <label for="firstName">
             <input type="text" name="firstName" placeholder="First name">

@@ -21,8 +21,8 @@ Route::get('/contacts', function () {
     return view('contacts');
 });
 
-Route::get('/contacts/new', [contactController::class, 'create']);
-Route::post('/contacts/new', [contactController::class, 'store']);
+Route::get('/new', [contactController::class, 'create']);
+Route::post('/new', [contactController::class, 'store']);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

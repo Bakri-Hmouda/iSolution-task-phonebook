@@ -40,7 +40,7 @@ class contactController extends Controller
                 'firstName' => ['required', 'max:255'],
                 'lastName' => ['max:255'],
                 'email' => ['email:rfc,dns'],
-                'phoneNumber' => ['required', 'integer']
+                'phoneNumber' => ['required', 'numeric']
             ]
         );
 
@@ -48,6 +48,6 @@ class contactController extends Controller
 
         $newContact = contact::create($request->input());
 
-        return response()->json(['data' => $newContact]);
+        return redirect('/');
     }
 }
