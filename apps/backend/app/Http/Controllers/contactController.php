@@ -7,18 +7,21 @@ use App\Models\contact;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class contactController extends Controller
+
+
 {
 
-
     /**
-     * show all contacts view
-     * ------------------------------------------------
+     * return home page
      */
-    public function get()
+
+    public function index()
     {
         $contacts = contact::all();
         return view('contacts', ["contacts" => $contacts]);
     }
+
+
 
     /**
      * return new contact form view
