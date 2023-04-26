@@ -14,7 +14,7 @@ use App\Http\Controllers\contactController;
 |
 */
 
-Route::get('/', [contactController::class, 'get']);
+Route::get('/', [contactController::class, 'index']);
 
 
 Route::get('/contacts', function () {
